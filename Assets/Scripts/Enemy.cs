@@ -101,13 +101,9 @@ namespace OstensusBill
 
         #region Collision
         
-        //What happens when anything collides with the enemy
+        //When the enemy collides with the player
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            if (collision.tag == "Bullet")
-            {
-                EnemyDeath();
-            }
             if(collision.tag == "Player")
             {
                 PlayerController.instance.currentLives -= enemyDamage;
